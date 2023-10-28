@@ -9,21 +9,19 @@ public class ShowAllModel implements Serializable {
     String name;
 
     String rating;
-    String price;
+    int price;
+    String type;
 
+    public ShowAllModel() {
+    }
 
-
-    public ShowAllModel(String img_url, String description, String name, String rating, String price) {
+    public ShowAllModel(String img_url, String description, String name, String rating, int price, String type) {
         this.img_url = img_url;
         this.description = description;
         this.name = name;
         this.rating = rating;
         this.price = price;
-
-    }
-
-    public ShowAllModel(){
-
+        this.type = type;
     }
 
     public String getImg_url() {
@@ -58,13 +56,19 @@ public class ShowAllModel implements Serializable {
         this.rating = rating;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
+    public String getType() {
+        return type;
+    }
 
+    public void setType(String type) {
+        this.type = type;
+    }
 }

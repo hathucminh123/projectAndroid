@@ -6,7 +6,7 @@ public class PopularProductsModel implements Serializable {
 
     String img_url;
     String name;
-    String price;
+    int price;
 
     String rating;
 
@@ -15,19 +15,17 @@ public class PopularProductsModel implements Serializable {
 
     String type;
 
-    public PopularProductsModel(String img_url, String name, String price, String rating, String description,String type) {
+    public PopularProductsModel() {
+    }
+
+    public PopularProductsModel(String img_url, String name, int price, String rating, String description, String type) {
         this.img_url = img_url;
         this.name = name;
         this.price = price;
         this.rating = rating;
         this.description = description;
-        this.type=type;
+        this.type = type;
     }
-
-    public  PopularProductsModel(){
-
-  }
-
 
     public String getImg_url() {
         return img_url;
@@ -45,11 +43,11 @@ public class PopularProductsModel implements Serializable {
         this.name = name;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

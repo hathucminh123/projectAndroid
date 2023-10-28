@@ -7,17 +7,19 @@ public class NewProductsModel  implements Serializable {
     String name;
 
     String rating;
-    String price;
+    int price;
     String img_url;
 
-    public NewProductsModel(String description, String name, String rating, String price, String img_url) {
+    public NewProductsModel(String description, String name, String rating, int price, String img_url) {
         this.description = description;
         this.name = name;
         this.rating = rating;
         this.price = price;
         this.img_url = img_url;
     }
-    public NewProductsModel(){}
+
+    public NewProductsModel() {
+    }
 
     public String getDescription() {
         return description;
@@ -43,11 +45,11 @@ public class NewProductsModel  implements Serializable {
         this.rating = rating;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
